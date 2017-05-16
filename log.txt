@@ -1,0 +1,191 @@
+For node number = 6  
+	Type :					{Linear , Sigmoidal , Linear}
+	Nodes :					{1 , 3 , 2}
+	
+	Dataset:				Input			Output
+							0 , 0			   0
+							0 , 1			   1
+							1 , 0			   1
+							1 , 1			   0
+	#XOR Gate						
+
+	CPU Performance :		0.022472 , 0.020588 , 0.25210 , 0.28329 , 0.030303 , 0.018634 , 0.017157 , 0.020772 , 0.019718 , 0.006912
+	GPU Performance :		1.673797 , 1.394541 , 1.434629 , 1.501718 , 1.400943 , 1.478947 , 1.453488 , 1.502825 , 1.50000 , 1.529412
+
+	CPU Rate :				0.5
+	GPU Rate :				4.0
+	#Performance is measured by calculating the total time(in seconds) taken to perform 1000 forward-backward-update operations. 
+
+For node number = 12
+	
+	Type :					{Linear , Sigmoidal , Sigmoidal , Linear}
+	Nodes :					{1 , 4 , 4 , 3}
+
+
+	Dataset :				Input			Output
+						   0 , 0 , 0          0
+						   0 , 0 , 1          1
+						   0 , 1 , 0          1
+						   0 , 1 , 1          0
+						   1 , 0 , 0		  1
+						   1 , 0 , 1          0
+						   1 , 1 , 0          0
+						   1 , 1 , 1          1
+
+	CPU Performance :	   0.006623 , 0.031746 , 0.032258 , 0.032787 , 0.016129 , 0.031250 , 0.044118 , 0.032787 , 0.016129 , 0.061538	
+	GPU Performance :	   1.454545 , 1.772727 , 1.522727 , 1.800000 , 1.733333 , 1.857143 , 1.733333 , 1.441860 , 1.377778 , 1.813953 
+
+	
+	CPU Rate :				0.5
+	GPU Rate :				4.0
+
+
+For node number = 458
+
+	Type :					{Linear , Linear , Linear , Linear , Linear , Linear , Linear , Linear , Linear , Linear}
+	Nodes :					{1 , 7 , 15 , 25 , 30 , 50 , 65 , 75 , 90 , 100}
+
+
+	Dataset : 
+
+							Input Size :			100
+							Output Size :			 1
+							Number of Dataset :		 5
+
+	CPU Performance :		1.553991 , 1.567398 , 1.573466 , 1.604070 , 1.568264 , 1.569758 , 1.566922 , 1.555556 , 1.649224 , 1.568395
+	GPU Performance :		7.794554 , 7.752834 , 7.747059 , 7.668778 , 7.762854 , 7.773955 , 7.683782 , 7.738462 , 7.696345 , 7.767003
+
+	CPU Rate :				0.01
+	GPU Rate :				0.01
+
+
+For node number = 1560
+
+	Type :					{Linear , Linear , Linear , Linear , Linear , Linear , Linear , Linear , Linear , Linear}
+	Nodes :					{1 , 17 , 25 , 42 , 60 , 120 , 195 , 320 , 380 , 400}
+
+	Dataset : 
+							
+							Input Size :		400
+							Output Size :		 1
+							Number of Dataset :  5
+
+	CPU Performance :		20.183429 , 20.321544 , 20.554524 , 19.522998 , 21.135947 , 20.435681 , 20.956498 , 21.55442 , 22.00458 
+	GPU Performance :		28.175000 , 28.019000 
+	
+	CPU Rate :				0.000001
+	GPU Rate :				0.000001
+	
+	
+
+
+For node number 18:
+
+	Weight Count : 63
+	Average CPU time : 0.01
+	Average GPU time : 4.48
+
+
+
+For node number 39:
+	Weight Count : 270
+	Average CPU time : 0.036000
+	Average GPU time : 3.33000
+
+For node number 56:
+	Weight count : 558
+	Average CPU time : 0.047
+	Average GPU time : 3.574
+
+
+For node Number 130:
+	Weight Connection : 2803
+	Average CPU time : 0.172
+	Average GPU time : 4.277
+
+
+For node Number 201:
+	Weight Connection : 6833
+	Average CPU time : 0.366
+	Average GPU time : 5.133
+
+For node Number 301:
+	Weight Connection : 14265
+	Average CPU time : 0.814
+	Average GPU time : 5.552
+
+For node Number 701:
+	 Number of weight connections : 71140
+	 Average CPU time : 3.703
+	 Average GPU time : 10.797
+
+For node Number 1145:
+	Number of weight connections : 177265
+	Average CPU time : 9.609000
+	Average GPU time : 18.85000
+
+
+For node Number 1910:
+	Number of weight connections : 497865
+	Average CPU time:  27.484
+	Average GPU time : 36.031
+
+For node Number 2551:
+	Number of weight connections : 816765
+	Average CPU time : 46.704
+	Average GPU time : 53.141
+
+For node number 3195:
+	Numbe of weight connections : 1297140
+	Average CPU time : 81.735
+	Average GPU time : 75.434
+
+For node Number 3825:
+	Number of weight connections : 1767640
+	Average CPU time : 121.205
+	Average GPU time : 97.392
+
+For node Number 4796:
+	Number of weight connections : 2620515
+	Average CPU time : 184.065
+	Average GPU time : 132.658
+
+For node Number 5460:
+	Number of weight connections : 4904485
+	Average CPU time : 357.57
+	Average GPU time : 267.2
+
+For node Number 6121:
+	Number of weight connections : 3935890
+	Average CPU time : 260.128
+	Average GPU time : 186.846
+
+For node Number 6750:
+	Number of weight connection : 4332580
+	Average CPU time : 321.121
+	Average GPU time : 202.225
+
+For node Number 7239:
+	Number of weight connection : 5467893
+	Average CPU time : 375.325
+	Average GPU time : 233.356
+
+For node Number 7896:
+	Number of weight connections : 6355265
+	Average CPU time : 408.112
+	Average GPU time : 275.065
+
+For node Number 9096:
+	Number of weight connections : 7830265
+	Average CPU time : 507.696
+	Average GPU time : 331.996
+
+For node Number 9560:
+	Number of weight connections : 8357987
+	Average CPU time : 569.689
+	Average GPU time :	357.423;
+
+For node Number 10000:
+	Number of weight connections : 8660065
+	Average CPU time : 608.630
+	Average GPU time : 367.463

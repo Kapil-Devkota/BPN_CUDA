@@ -1,3 +1,4 @@
+
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 
@@ -52,4 +53,6 @@ double reverse(BPN_CUDA* network , double* target , int size);
 void weight_bias_update(BPN_CUDA* network , double rate);
 void copyBPNinput(BPN_CUDA* network , double *input);
 
-double train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size);
+int train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size);
+
+void returnOutput(BPN_CUDA* network , double* input , double* output);

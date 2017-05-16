@@ -181,13 +181,6 @@ void forward(BPN_CUDA* network , double *input){
 		if(i == 0)
 			break;
 
-		/*DEBUG
-		double* z = new double[sizeCurr];
-		cudaMemcpy(z , z_curr , sizeCurr * sizeof(double) , cudaMemcpyDeviceToHost);
-		printf("\n\nDEBUG:");
-		for(int m = 0 ; m < sizeCurr ; m ++)
-			printf("%f\n" , z[m]);
-		DEBUG END*/
 		
 		if(i == 0)
 			break;
@@ -204,12 +197,6 @@ void forward(BPN_CUDA* network , double *input){
 
 	}
 
-	/*DEBUG
-	double output;
-	cudaMemcpy(&output , network->z_val , sizeof(double) , cudaMemcpyDeviceToHost);
-
-	printf("\n\n\n%f\n\n" , output);
-	DEBUG END*/
 
 }
 /*Function to compute the reverse propagation of values*/
@@ -296,10 +283,10 @@ void weight_bias_update(BPN_CUDA* network , double rate){
 	}
 }
 
-double train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size){
+int train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size){
 	double error;
 	double *ip , *op;
-
+	int count = 0;
 	while(true){
 		error = 0;
 		ip = input;
@@ -312,14 +299,14 @@ double train(BPN_CUDA* network , double* input , double* output , int dataset_no
 			op = op + output_size;
 		}
 
-		printf("%f\n" , error);
+		//printf("%f\n" , error);
 
-		if(error < THRES);
-		//	break;
+		if(error < THRES || count == 1000)
+			break;
 
-		
+		count ++;
 	}
-	return error;
+	return count;
 }
 
 void initialize(BPN_CUDA* network , int* noNodes , int levels , Type* type , double rate){
@@ -364,18 +351,18 @@ void initialize(BPN_CUDA* network , int* noNodes , int levels , Type* type , dou
 
 	for(int i = 0 ; i < numWeights ; i ++){
 		
-		initweight[i] = (double)(rand() % 50) / 1000.0;
-		initweight[i] = initweight[i] == 0.0 ? 0.01 : initweight[i];
+		initweight[i] = (double)(rand() % 50) / 100000.0;
+		initweight[i] = initweight[i] == 0.0 ? 0.0001 : initweight[i];
 
 		if(i < numNodes){
-			initval[i] = (double)(rand() % 50) / 1000.0;
-			initval[i] = initval[i] == 0.0 ? 0.01 : initval[i];
+			initval[i] = (double)(rand() % 50) / 100000.0;
+			initval[i] = initval[i] == 0.0 ? 0.0001 : initval[i];
 		}
 
 	}
 
 	if(numWeights == 2)//If number of weight connections is true, then no-weights = no-nodes + 1
-		initval[2] = 0.01;
+		initval[2] = 0.0001;
 
 	cudaMemcpy(network->a_val , initval , numNodes * sizeof(double) , cudaMemcpyHostToDevice);	
 	cudaMemcpy(network->z_val , initval , numNodes * sizeof(double) , cudaMemcpyHostToDevice);	
@@ -383,8 +370,13 @@ void initialize(BPN_CUDA* network , int* noNodes , int levels , Type* type , dou
 	cudaMemcpy(network->bias , initval , numNodes * sizeof(double) , cudaMemcpyHostToDevice);	
 	cudaMemcpy(network->weight , initweight , numWeights * sizeof(double) , cudaMemcpyHostToDevice);
 
-	for(int i = 0 ; i < numWeights ; i ++)
-		printf("%f\n" , initweight[i]);
-	for(int i = 0 ; i < numNodes ; i ++)
-		printf("\n%f" , initval[i]);
+}
+
+void returnOutput(BPN_CUDA* network , double* input , double* output){
+	int size = network->nodeSize[0];
+	forward(network , input);
+
+	cudaMemcpy(output , network->z_val , size * sizeof(double) , cudaMemcpyDeviceToHost);
+
+	return;
 }
