@@ -159,11 +159,13 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     <ClInclude Include="bpn_cuda.h" />
     <ClInclude Include="CImg.h" />
     <ClInclude Include="img_dataset_creator.h" />
+    <ClInclude Include="mnist.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bpn.cpp" />
     <ClCompile Include="img_dataset_creator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mnist.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="log.txt" />
