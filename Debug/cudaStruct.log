@@ -1,54 +1,25 @@
-﻿Build started 5/19/2017 12:08:47 AM.
-     1>Project "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct\cudaStruct.vcxproj" on node 2 (Build target(s)).
-     1>AddCudaCompileDeps:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct\bpn_cuda.cu" 
-       CudaBuild:
-         Compiling CUDA source file bpn_cuda.cu...
-         cmd.exe /C "C:\Users\Dell\AppData\Local\Temp\tmp385f6936587c4f1da0cfe7de45f5bdd5.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2012 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\bpn_cuda.cu.obj "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct\bpn_cuda.cu"
-         
-         C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2012 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\bpn_cuda.cu.obj "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct\bpn_cuda.cu" 
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(13): warning : missing return statement at end of non-void function "computeFunc"
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(22): warning : missing return statement at end of non-void function "computeDiff"
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(335): warning : variable "device_mem" was declared but never referenced
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(13): warning : missing return statement at end of non-void function "computeFunc"
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(22): warning : missing return statement at end of non-void function "computeDiff"
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(161): warning : specifiers after comma between declarations are nonstandard
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(335): warning : variable "device_mem" was declared but never referenced
-         bpn_cuda.cu
-     1>C:/Users/Dell/documents/visual studio 2012/Projects/cudaStruct/cudaStruct/bpn_cuda.cu(335): warning C4101: 'device_mem' : unreferenced local variable
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp mnist.cpp
-         mnist.cpp
-     1>c:\users\dell\documents\visual studio 2012\projects\cudastruct\cudastruct\mnist.cpp(60): warning C4101: 'mgk_' : unreferenced local variable
-     1>c:\users\dell\documents\visual studio 2012\projects\cudastruct\cudastruct\mnist.cpp(60): warning C4101: 'n_rows' : unreferenced local variable
-     1>c:\users\dell\documents\visual studio 2012\projects\cudastruct\cudastruct\mnist.cpp(60): warning C4101: 'n_cols' : unreferenced local variable
+﻿Build started 5/20/2017 11:32:13 PM.
+     1>Project "C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\cudaStruct\cudaStruct.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.lib" /MACHINE:X86 Debug\bpn_cuda.cu.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\Debug\cudaBPN.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\Debug\cudaBPN.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\Debug\cudaBPN.lib" /MACHINE:X86 Debug\bpn_cuda.cu.obj
          Debug\bpn.obj
          Debug\img_dataset_creator.obj
          Debug\main.obj
          Debug\mnist.obj
-         cudaStruct.vcxproj -> C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.exe
+         cudaStruct.vcxproj -> C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\Debug\cudaBPN.exe
        PostBuildEvent:
-         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\"
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\"
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\Debug\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\Debug\"
          :VCEnd
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\Debug\"
          C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
          C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
                  2 file(s) copied.
-     1>Done Building Project "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct\cudaStruct.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\Dell\Documents\Visual Studio 2012\Projects\cudaStruct\cudaStruct\cudaStruct.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:09.29
+Time Elapsed 00:00:03.25

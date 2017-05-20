@@ -34,7 +34,7 @@ void getLevelWeights(BPN* network , int level , double** weights , int* size , i
 void forward_propagate_level(int level , BPN *network);
 void reverse_propagate_level(int level , BPN *network , double* target);
 void weight_bias_update(BPN *network);
-int train(BPN* network , double* input , double* output , int dataset_no , int input_size , int output_size);
+int train(BPN* network , double* input , double* output , int dataset_no , int input_size , int output_size , int total_iterations = -1);
 double reverse(BPN* network , double* target);
 void forward(BPN* network , double* input);
 void initialize(BPN* network , int* noNodes , int levels , Type* type , double rate);
