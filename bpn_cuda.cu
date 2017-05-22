@@ -283,10 +283,13 @@ void weight_bias_update(BPN_CUDA* network , double rate){
 	}
 }
 
-int train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size){
+int train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size , int total_iterations){
 	double error;
 	double *ip , *op;
 	int count = 0;
+	if(total_iterations == -1)
+		total_iterations = 1000;
+
 	while(true){
 		error = 0;
 		ip = input;
@@ -301,7 +304,7 @@ int train(BPN_CUDA* network , double* input , double* output , int dataset_no , 
 
 		//printf("%f\n" , error);
 
-		if(error < THRES || count == 1000)
+		if(error < THRES || count == total_iterations)
 			break;
 
 		count ++;

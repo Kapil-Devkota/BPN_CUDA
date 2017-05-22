@@ -57,6 +57,6 @@ double reverse(BPN_CUDA* network , double* target , int size);
 void weight_bias_update(BPN_CUDA* network , double rate);
 void copyBPNinput(BPN_CUDA* network , double *input);
 
-int train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size);
+int train(BPN_CUDA* network , double* input , double* output , int dataset_no , int input_size , int output_size , int total_iterations = -1);
 
 void returnOutput(BPN_CUDA* network , double* input , double* output);

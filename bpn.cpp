@@ -195,10 +195,13 @@ double reverse(BPN* network , double* target){
 }
 
 
-int train(BPN* network , double* input , double* output , int dataset_no , int input_size , int output_size){
+int train(BPN* network , double* input , double* output , int dataset_no , int input_size , int output_size , int total_iterations){
 	double error;
 	double *ip , *op;
 	int count = 0;
+
+	if(total_iterations == -1)
+		total_iterations = 1000;
 
 	while(true){
 		error = 0;
@@ -214,7 +217,7 @@ int train(BPN* network , double* input , double* output , int dataset_no , int i
 
 //		printf("\nError:%f\n" , error);
 
-		if(error < THRES || count == 1000)
+		if(error < THRES || count == total_iterations)
 			break;
 
 		count ++;	

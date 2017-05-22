@@ -10,11 +10,11 @@ int reverseInt(int i){
 }
 
 
-double** ReadMNISTIMAGE(char *filename , int& num_image , int& size_image_rows , int& size_image_cols )
+double* ReadMNISTIMAGE(char *filename , int& num_image , int& size_image_rows , int& size_image_cols )
 {
 //    arr.resize(NumberOfImages,vector<double>(DataOfAnImage));
     std::ifstream file (filename , std::ios::binary);
-	double **dataset = NULL;
+	double *dataset = NULL;
 	
 	if (file.is_open())
     {
@@ -32,11 +32,9 @@ double** ReadMNISTIMAGE(char *filename , int& num_image , int& size_image_rows ,
 		file.read((char*)&size_image_cols , sizeof(size_image_cols));
         size_image_cols = reverseInt(size_image_cols);
 
-		dataset = new double*[num_image];
 		
-		int size_image = size_image_rows * size_image_cols;
-		for(int i = 0 ; i < num_image ; i ++)
-			dataset[i] = new double[size_image];
+		int size_image = size_image_rows * size_image_cols;		
+		dataset = new double[num_image * size_image];
 
 		for(int i = 0 ; i < num_image ; i ++)        
             for(int r = 0 ; r < size_image_rows ; r ++)
@@ -44,11 +42,9 @@ double** ReadMNISTIMAGE(char *filename , int& num_image , int& size_image_rows ,
                 {
                     unsigned char temp = 0;
                     file.read((char*)&temp , sizeof(temp));
-                    dataset[i][(size_image_rows * r) + c] = (double)temp;
+                    dataset[i * size_image + (size_image_cols * r) + c] = (double)temp;
                 }
-            
-        
-
+         
     }
 
 	return dataset;
@@ -76,9 +72,7 @@ double* ReadMNISTLABEL(char* filename , int& size){
 			unsigned char tmp;
 			file.read((char *)&tmp , 1);
 			dataset[i] = (double)tmp;
-			if(i % 10 == 0)
-				printf("\n");
-			printf("%1.0f  " , dataset[i]);
+			
 		}
 
 	}
