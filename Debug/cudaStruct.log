@@ -1,0 +1,26 @@
+﻿Build started 5/24/2017 9:01:03 PM.
+     1>Project "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct\cudaStruct.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\dell\documents\visual studio 2012\projects\cudastruct\cudastruct\main.cpp(143): warning C4101: 'time_spent' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.lib" /MACHINE:X86 Debug\bpn_cuda.cu.obj
+         Debug\bpn.obj
+         Debug\img_dataset_creator.obj
+         Debug\main.obj
+         Debug\mnist.obj
+         cudaStruct.vcxproj -> C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\cudaBPN.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\Debug\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
+                 2 file(s) copied.
+     1>Done Building Project "C:\Users\Dell\documents\visual studio 2012\Projects\cudaStruct\cudaStruct\cudaStruct.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.45
