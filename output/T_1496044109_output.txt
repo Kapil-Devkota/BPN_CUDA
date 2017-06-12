@@ -1,0 +1,45 @@
+For Node Count: 4000
+	Total Number of Layers: 8
+	Total Number of Weights: 1999216
+	Total Iterations: 25
+	Number of Samples: 700
+	CPU Time: 1737.72
+	GPU Time: 1565.83
+
+
+For Node Count: 4000
+	Total Number of Layers: 8
+	Total Number of Weights: 1999216
+	Total Iterations: 25
+	Number of Samples: 800
+	CPU Time: 1967.66
+	GPU Time: 1792.09
+
+
+For Node Count: 4000
+	Total Number of Layers: 8
+	Total Number of Weights: 1999216
+	Total Iterations: 25
+	Number of Samples: 900
+	CPU Time: 2214.85
+	GPU Time: 2017.84
+
+
+For Node Count: 4000
+	Total Number of Layers: 8
+	Total Number of Weights: 1999216
+	Total Iterations: 20
+	Number of Samples: 1000
+	CPU Time: 2493.18
+	GPU Time: 2260.9
+
+
+For Node Count: 4000
+	Total Number of Layers: 8
+	Total Number of Weights: 1999216
+	Total Iterations: 20
+	Number of Samples: 1500
+	CPU Time: 3743.18
+	GPU Time: 3389.19
+
+
