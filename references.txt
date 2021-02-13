@@ -1,0 +1,17 @@
+1) The steepest descent method is surprisingly a less effective method for global minima search....and the implementation of heuristics like momentum and delta-bar-delta procedures can significantly improve the rate of convergence.
+
+R. A. Jacobs, Increased rates of convergence through learning rate adaptation. Neural Networks, Vol. 1, pp. 295-307, 1988
+(http://www.sciencedirect.com/science/article/pii/0893608088900032)
+
+2) Using dedicated hardware to do machine learning
+typically ends up in disaster because of cost,
+obsolescence, and poor software. Graphic Processing Units (GPUs), which are now
+available on every PC, provides an attractive
+alternative which yield speedup in both training and testing in Machine Learning algorithms.
+
+Steinkrau, D., Simard, P.Y., Buck, I.: Using GPUs for machine learning algorithms.
+In: ICDAR 2005: Proc. of the Eighth International Conference on Doc. Analysis
+and Recognition, Washington, DC, USA, pp. 1115–1119. IEEE Comp. Society, Los
+Alamitos (2005)
+
+
